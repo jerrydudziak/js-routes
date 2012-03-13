@@ -148,7 +148,7 @@ class JsRoutes
 
 
   def path_parts route
-    route_spec(route).gsub(/\(\.:format\)$/, "").split(/:[a-z\-_]+/)
+    route_spec(route).gsub(/\(\.:format\)$/, "").split(/(?:\:|\*)[a-z\-_]+/)
   end
 
   def route_spec route
